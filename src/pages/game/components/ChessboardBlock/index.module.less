@@ -1,0 +1,123 @@
+.block {
+	border-radius: 4px;
+	width: 36px;
+	height: 36px;
+	display: inline-block;
+	position: relative;
+
+	&.norem {
+		& + div {
+			margin-left: 4px;
+		}
+	}
+}
+
+.chessboardBlock {
+	outline: 1px solid #ffffff80;
+	color: #fff;
+
+	&.bank {
+		background-color: #bb4dff;
+		outline-color: #bb4dff;
+	}
+
+	&.tax {
+		background-color: #fe42a2;
+		outline-color: #fe42a2;
+	}
+
+	&.park {
+		background-color: #4f95ff;
+		outline-color: #4f95ff;
+	}
+
+	&.grab {
+		background-color: #ff6666;
+		outline-color: #ff6666;
+	}
+
+	&.bomb {
+		background-color: #fffffff2;
+		outline-color: #fffffff2;
+		color: #354a52;
+	}
+
+	&.shield {
+		background-color: #08cc8c;
+		outline-color: #08cc8c;
+	}
+
+	&.emptyHouse {
+		.content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				width: 20%;
+			}
+		}
+	}
+
+	&.house {
+		color: #fff;
+
+		.content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+
+			> span {
+				position: relative;
+				font-size: 10px;
+				z-index: 2;
+			}
+
+			svg {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%) !important;
+				z-index: 0;
+				width: 80% !important;
+				height: 80% !important;
+			}
+		}
+	}
+
+	.content {
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		position: relative;
+		z-index: 10;
+	}
+
+	&.tax,
+	&.bank,
+	&.park,
+	&.grab,
+	&.shield,
+	&.bomb {
+		cursor: pointer;
+
+		.content {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			height: 100%;
+
+			img {
+				width: 15px;
+				border-radius: 100%;
+				margin-bottom: 2px;
+			}
+
+			.label {
+				font-size: 8px;
+			}
+		}
+	}
+}

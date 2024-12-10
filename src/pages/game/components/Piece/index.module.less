@@ -1,0 +1,36 @@
+.piece {
+	display: block;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	cursor: pointer;
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		background-color: red;
+		width: 6px;
+		height: 6px;
+		border-radius: 100%;
+		border: 1px solid #ffffff;
+	}
+
+	&.currentUser {
+		z-index: 11;
+	}
+
+	img {
+		width: 70%;
+		height: 70%;
+		border-radius: 100%;
+		overflow: hidden;
+		border: 1px solid #ffffff;
+	}
+}

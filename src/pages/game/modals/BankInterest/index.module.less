@@ -1,0 +1,29 @@
+.container {
+	display: flex;
+
+	> div + div {
+		margin-left: 23px;
+	}
+
+	> div {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		img {
+			width: 40px;
+		}
+
+		.value {
+			font-size: 11px;
+			margin: 14px 0 10px;
+		}
+
+		.tips {
+			color: #00000080;
+			font-size: 7.7px;
+			margin-top: 10px;
+		}
+	}
+}

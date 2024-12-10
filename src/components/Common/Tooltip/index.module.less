@@ -1,0 +1,48 @@
+.tooltipWrapper {
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+.baseTooltip {
+	position: fixed;
+	z-index: 101;
+
+	.mask {
+		position: fixed;
+		background-color: rgba(0, 0, 0, 0.5);
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+	}
+
+	.baseTooltipContainer {
+		position: fixed;
+		z-index: 100;
+		color: #000;
+		background-color: #fff;
+		padding: 8px;
+		border-radius: 8px;
+		font-size: 10px;
+		width: 120px;
+		display: inline-block;
+
+		&.right {
+			transform: translate(8px, -50%);
+		}
+
+		&.topRight,
+		&.bottomRight {
+			transform: translateX(8px);
+		}
+
+		&.left {
+			transform: translate(-100% - 8px, -50%);
+		}
+
+		&.topLeft,
+		&.bottomLeft {
+			transform: translate(-100% - 8px);
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.container {
+	position: relative;
+	height: 300px;
+	padding-bottom: 24px;
+	overflow-y: auto;
+
+	.fixed {
+		position: fixed;
+		background-color: @primaryColor;
+		bottom: 20px;
+		left: 0;
+		width: calc(100% - 40px);
+		padding: 0 20px;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+	}
+
+	.userItem + .userItem {
+		border-top: 1px solid #0000004d;
+	}
+
+	.userItem {
+		display: flex;
+		align-items: center;
+		padding: 7.7px 0;
+
+		.rank {
+			width: 20px;
+			font-size: 8px;
+			margin-right: 6px;
+		}
+
+		.avatar {
+			width: 20px;
+			border-radius: 100%;
+			margin-right: 7px;
+			border: 2px solid #ffffff;
+		}
+
+		.name {
+			font-size: 8px;
+			flex: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		.total {
+			display: flex;
+			flex-direction: column;
+			align-items: end;
+			margin-left: 7px;
+
+			.label {
+				font-size: 6.3px;
+				color: #00000080;
+			}
+
+			.value {
+				font-size: 8px;
+				margin-top: 1px;
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	:global {
+		.custom-tabs {
+			margin-bottom: 14px;
+		}
+
+		.custom-inputNumberControl {
+			margin: 15px 0;
+		}
+	}
+
+	.tips {
+		color: #00000080;
+		width: 100%;
+		margin-top: 13px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		> span {
+			font-size: 7.7px;
+			margin-top: 2px;
+		}
+
+		img {
+			width: 10px;
+			margin-left: 4px;
+			cursor: pointer;
+		}
+	}
+}

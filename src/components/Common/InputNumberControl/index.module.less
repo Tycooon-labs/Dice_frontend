@@ -1,0 +1,45 @@
+.inputNumberControl {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.control {
+		display: flex;
+		align-items: center;
+		background-color: @grayColor;
+		height: 35.5px;
+		border-radius: 7.7px;
+		flex: 1;
+
+		.icon {
+			height: 35px;
+			display: flex;
+			align-items: center;
+			padding: 0 10px;
+			cursor: pointer;
+
+			&.disabled {
+				opacity: 0.3;
+			}
+
+			img {
+				width: 15px;
+				height: 15px;
+				display: block;
+			}
+		}
+
+		.value {
+			text-align: center;
+			font-size: 11.5px;
+			flex: 1;
+		}
+	}
+
+	.max {
+		font-size: 9px;
+		margin-left: 8.5px;
+		cursor: pointer;
+	}
+}

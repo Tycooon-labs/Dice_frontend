@@ -1,0 +1,113 @@
+.container {
+	padding: 16px 19px;
+
+	.header {
+		display: flex;
+		margin-bottom: 10px;
+
+		.title + .title {
+			margin-left: 14px;
+		}
+
+		.title {
+			font-size: 11.5px;
+			color: #00000099;
+			cursor: pointer;
+
+			&.active {
+				color: #000;
+			}
+		}
+	}
+
+	.content {
+		height: 300px;
+		display: flex;
+		flex-direction: column;
+
+		.userList {
+			height: 100%;
+			overflow-y: auto;
+		}
+
+		.userItem + .userItem {
+			border-top: 1px solid #0000004d;
+		}
+
+		.userItem {
+			display: flex;
+			align-items: center;
+			padding: 7.7px 0;
+
+			.avatar {
+				width: 20px;
+				border-radius: 100%;
+				margin-right: 7px;
+			}
+
+			.info {
+				flex: 1;
+				display: flex;
+				align-items: center;
+
+				> span {
+					font-size: 8px;
+				}
+
+				.name {
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					max-width: 95px;
+					display: inline-block;
+				}
+			}
+		}
+
+		:global {
+			.custom-button {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+.failureToGrab {
+	position: fixed;
+	z-index: 110;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	.mask {
+		position: absolute;
+		background-color: rgba(0, 0, 0, 0.5);
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.grabContainer {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		> div {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+
+			span {
+				color: #fff;
+				font-size: 11.5px;
+			}
+
+			img {
+				width: 146px;
+			}
+		}
+	}
+}

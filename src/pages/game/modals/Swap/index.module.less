@@ -1,0 +1,45 @@
+.container {
+	display: flex;
+	flex-direction: column;
+
+	.control {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 13px;
+
+		:global {
+			.custom-inputNumber {
+				transition: all 0.5s ease-in-out;
+
+				&:first-of-type {
+					margin-bottom: 13px;
+				}
+			}
+		}
+
+		.iconArrowDown {
+			position: absolute;
+			width: 19px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			cursor: pointer;
+			z-index: 10;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.tips {
+		color: #00000080;
+		width: 100%;
+		margin-top: 13px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 7.7px;
+	}
+}
